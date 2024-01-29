@@ -1,9 +1,9 @@
 # Salario líquido uruguay
 
-![Versión](https://img.shields.io/github/package-json/v/ismaelpadilla/salario-liquido-uruguay?label=versi%C3%B3n)
-![Build y test](https://github.com/ismaelpadilla/salario-liquido-uruguay/workflows/Build%20y%20test/badge.svg)
+![Versión](https://img.shields.io/github/package-json/v/bre7/salario-liquido-uruguay?label=versi%C3%B3n)
+![Build y test](https://github.com/bre7/salario-liquido-uruguay/workflows/Build%20y%20test/badge.svg)
 
-✔Actualizado para el 2022.
+✔Actualizado para el 2024.
 
 ----
 
@@ -50,7 +50,4 @@ El IPRF (antes de aplicar las [deducciones correspondientes](https://www.dgi.gub
 
 ## Cómo reportar errores
 
-Los errores en los cálculos, así como cualquier otro problema en la aplicación o esta documentación, pueden reportarse de dos maneras:
-
-- (Recomendado) Creando una *issue* en GitHub ([link](https://github.com/ismaelpadilla/salario-liquido-uruguay/issues/new)).
-- Reportando los errores por correo electrónico ([link](mailto:padillaismael92@gmail.com)).
+Creando un *issue* en GitHub.
