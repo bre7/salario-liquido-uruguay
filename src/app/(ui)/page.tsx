@@ -110,7 +110,6 @@ const DefaultPage = () => {
             formValido: true,
           },
         })
-        console.log("displayResults", "OK", state)
       } else {
         setState({
           ...state,
@@ -120,7 +119,6 @@ const DefaultPage = () => {
             formValido: false,
           },
         })
-        console.log("displayResults", "NO 1", state)
       }
     } else {
       setState({
@@ -131,7 +129,6 @@ const DefaultPage = () => {
           formValido: false,
         },
       })
-      console.log("displayResults", "NO 2", state)
     }
   }
 
