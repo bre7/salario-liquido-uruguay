@@ -12,7 +12,8 @@
     "test": "jest"
   },
   "dependencies": {
-    "@vercel/speed-insights": "^1.0.2",
+    "@vercel/analytics": "^1.1.2",
+    "@vercel/speed-insights": "^1.0.9",
     "next": "14.1.0",
     "numeral": "^2.0.6",
     "react": "^18",
