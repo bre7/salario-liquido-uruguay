@@ -94,7 +94,8 @@ function Form({
             padding: "1rem",
           }}
         >
-          TOPE APORTE JUBILATORIO no encontrado para el año {formState.anio}
+          TOPE APORTE JUBILATORIO no encontrado para el año {formState.anio}, utilizando valor de{" "}
+          {formState.anio - 1}
         </div>
       )}
 

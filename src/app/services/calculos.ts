@@ -79,8 +79,11 @@ export const calcularAportesBPS = (
   if (tieneConyuge) porcentajeFonasa += valoresFonasa.conyuge
 
   // Calcular valores de retorno
+  const topeJubilatorio = TOPE_APORTES_JUBILATORIOS.has(anio)
+    ? TOPE_APORTES_JUBILATORIOS.get(anio)!
+    : TOPE_APORTES_JUBILATORIOS.get(anio - 1)!
   const aportesJubilatorios =
-    Math.min(TOPE_APORTES_JUBILATORIOS.get(anio)!, salarioNominal) * APORTES_JUBILATORIOS * 0.01 // TODO: Check not null
+    Math.min(topeJubilatorio, salarioNominal) * APORTES_JUBILATORIOS * 0.01 // TODO: Check not null
   const aportesFONASA = salarioNominal * porcentajeFonasa * 0.01
   const aporteFRL = salarioNominal * APORTE_FRL * 0.01
 
