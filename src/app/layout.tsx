@@ -19,11 +19,6 @@ if (process.env.NODE_ENV === "production") {
 
 export const metadata: Metadata = {
   title: "Salario líquido Uruguay",
-  robots: {
-    index: false,
-    follow: false,
-    nocache: true,
-  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
