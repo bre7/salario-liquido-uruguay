@@ -1,6 +1,6 @@
 "use client"
 
-import { BPC } from "#/app/data/constants"
+import { BPC, TOPE_APORTES_JUBILATORIOS } from "#/app/data/constants"
 // import { numeral } from "#/app/numeral"
 import classNames from "classnames"
 import styles from "./Form.module.scss"
@@ -81,6 +81,20 @@ function Form({
           }}
         >
           BPC no encontrado para el año {formState.anio}
+        </div>
+      )}
+
+      {TOPE_APORTES_JUBILATORIOS.has(formState.anio) ? null : (
+        <div
+          style={{
+            margin: "2rem auto",
+            textAlign: "center",
+            backgroundColor: "#f8d7da",
+            maxWidth: "50%",
+            padding: "1rem",
+          }}
+        >
+          TOPE APORTE JUBILATORIO no encontrado para el año {formState.anio}
         </div>
       )}
 
