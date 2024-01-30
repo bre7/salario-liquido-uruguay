@@ -54,6 +54,7 @@ const APORTES_JUBILATORIOS = 15
 
 /**
  * Maximo del salario nominal sobre el cual aplican los aportes jubilatorios.
+ * // TODO: Se calcula con año actual si mes >= febrero
  */
 const TOPE_APORTES_JUBILATORIOS = new Map([
   [2023, 236_309],

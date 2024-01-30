@@ -80,7 +80,7 @@ export const calcularAportesBPS = (
 
   // Calcular valores de retorno
   const aportesJubilatorios =
-    Math.min(TOPE_APORTES_JUBILATORIOS.get(anio - 1)!, salarioNominal) * APORTES_JUBILATORIOS * 0.01 // TODO: Check not null
+    Math.min(TOPE_APORTES_JUBILATORIOS.get(anio)!, salarioNominal) * APORTES_JUBILATORIOS * 0.01 // TODO: Check not null
   const aportesFONASA = salarioNominal * porcentajeFonasa * 0.01
   const aporteFRL = salarioNominal * APORTE_FRL * 0.01
 

@@ -59,7 +59,7 @@ describe("Probar cálculo de aportes BPS para 2022", () => {
     /**
      * El aporte jubilatorio se aplica hasta el tope 188411 (valor 2020).
      */
-    const resultado = calcularAportesBPS(lastValidAnio(), salarioNominal, false, false)
+    const resultado = calcularAportesBPS(2022, salarioNominal, false, false)
 
     // Lo esperado deberia estar a un valor razonable de lo obtenido, para evitar errores de redondeo
     expect(resultado.aportesJubilatorios).toBeCloseTo(esperadoJubilatorio, 1)
