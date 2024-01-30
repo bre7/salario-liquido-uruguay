@@ -76,7 +76,7 @@ const DefaultPage = () => {
         detalleIRPF,
         totalIRPF,
       } = calcularImpuestos(
-        new Date().getFullYear(),
+        state.formState.anio,
         state.formState.salarioNominal,
         state.formState.tieneHijos,
         state.formState.tieneConyuge,
