@@ -9,7 +9,7 @@ import "./App.scss"
 interface IState {
   formState: IFormState
   result: {
-    anio: number,
+    anio: number
     formSubmitted: boolean
     salarioLiquido: number
     aportesJubilatorios: number
@@ -54,7 +54,7 @@ const DefaultPage = () => {
       formState: {
         ...state.formState,
         [name]: value,
-        formValido: true
+        formValido: true,
       },
     })
   }
@@ -65,8 +65,6 @@ const DefaultPage = () => {
   function onFormSubmitted(
     e: React.MouseEvent<HTMLButtonElement> | React.FormEvent<HTMLFormElement>
   ) {
-    console.log("onFormSubmitted")
-
     e.preventDefault()
 
     if (state.formState.salarioNominal > 0) {
@@ -109,8 +107,8 @@ const DefaultPage = () => {
           },
           formState: {
             ...state.formState,
-            formValido: true
-          }
+            formValido: true,
+          },
         })
         console.log("displayResults", "OK", state)
       } else {
@@ -119,8 +117,8 @@ const DefaultPage = () => {
           result: null,
           formState: {
             ...state.formState,
-            formValido: false
-          }
+            formValido: false,
+          },
         })
         console.log("displayResults", "NO 1", state)
       }
@@ -130,8 +128,8 @@ const DefaultPage = () => {
         result: null,
         formState: {
           ...state.formState,
-          formValido: false
-        }
+          formValido: false,
+        },
       })
       console.log("displayResults", "NO 2", state)
     }
@@ -139,12 +137,12 @@ const DefaultPage = () => {
 
   return (
     <>
-    <Form
-      onFormElementChanged={onFormElementChanged}
-      onFormSubmitted={onFormSubmitted}
-      formState={state.formState}
-    />
-    { state.result ? <Result calculateFrom={state.result} /> : null }
+      <Form
+        onFormElementChanged={onFormElementChanged}
+        onFormSubmitted={onFormSubmitted}
+        formState={state.formState}
+      />
+      {state.result ? <Result calculateFrom={state.result} /> : null}
     </>
   )
 }
