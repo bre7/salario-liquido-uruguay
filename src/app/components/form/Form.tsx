@@ -2,7 +2,8 @@
 
 import { BPC } from "#/app/data/constants"
 // import { numeral } from "#/app/numeral"
-import "./Form.scss"
+import classNames from "classnames"
+import styles from "./Form.module.scss"
 
 export interface IFormState {
   anio: number
@@ -42,19 +43,14 @@ function Form({
     e.target?.select()
   }
 
-  const submitBtnClasses = ["btnSubmit"]
-  if (!formState.formValido) {
-    submitBtnClasses.push("btnSubmit-invalido")
-  }
-
   return (
-    <form className="form" onSubmit={onFormSubmitted}>
-      <div className="form-grid">
+    <form className={styles.form} onSubmit={onFormSubmitted}>
+      <div className={styles.formGrid}>
         <label htmlFor="anio">Año</label>
         <input
           id="anio"
           name="anio"
-          className="form-input"
+          className={styles.formInput}
           type="number"
           onChange={onFormElementChanged}
           defaultValue={formState.anio}
@@ -64,7 +60,7 @@ function Form({
         <input
           id="inputSalario"
           name="salarioNominal"
-          className="form-input"
+          className={styles.formInput}
           type="number"
           min="0"
           onFocus={handleFocus}
@@ -88,13 +84,13 @@ function Form({
         </div>
       )}
 
-      <h2 className="form-section">Cálculo de aportes BPS</h2>
-      <div className="form-grid">
+      <h2 className={styles.formSection}>Cálculo de aportes BPS</h2>
+      <div className={styles.formGrid}>
         <label htmlFor="inputHijosACargo">¿Tiene hijos a cargo?</label>
         <input
           id="inputHijosACargo"
           name="tieneHijos"
-          className="form-input"
+          className={styles.formInput}
           type="checkbox"
           checked={formState.tieneHijos}
           onChange={onFormElementChanged}
@@ -103,22 +99,22 @@ function Form({
         <input
           id="inputConyujeACargo"
           name="tieneConyuge"
-          className="form-input"
+          className={styles.formInput}
           type="checkbox"
           checked={formState.tieneConyuge}
           onChange={onFormElementChanged}
         />
       </div>
-      <h2 className="form-section">Cálculo de IRPF</h2>
-      <h3 className="form-subSection">Cantidad de personas a cargo:</h3>
-      <div className="form-grid">
+      <h2 className={styles.formSection}>Cálculo de IRPF</h2>
+      <h3 className={styles.formSubSection}>Cantidad de personas a cargo:</h3>
+      <div className={styles.formGrid}>
         <label htmlFor="inputFactorDeduccion">
           Porcentaje de deducción de las personas a cargo:
         </label>
         <select
           id="inputFactorDeduccion"
           name="factorDeduccionPersonasACargo"
-          className="form-input"
+          className={styles.formInput}
           value={formState.factorDeduccionPersonasACargo}
           onChange={onFormElementChanged}
         >
@@ -130,7 +126,7 @@ function Form({
         <input
           id="inputHijosSinDiscapacidad"
           name="cantHijosSinDiscapacidad"
-          className="form-input"
+          className={styles.formInput}
           type="number"
           onFocus={handleFocus}
           min="0"
@@ -141,7 +137,7 @@ function Form({
         <input
           id="inputHijosConDiscapacidad"
           name="cantHijosConDiscapacidad"
-          className="form-input"
+          className={styles.formInput}
           type="number"
           onFocus={handleFocus}
           min="0"
@@ -149,13 +145,13 @@ function Form({
           onChange={onFormElementChanged}
         />
       </div>
-      <h3 className="form-subSection">Si es profesional:</h3>
-      <div className="form-grid">
+      <h3 className={styles.formSubSection}>Si es profesional:</h3>
+      <div className={styles.formGrid}>
         <label htmlFor="inputAportesFondoSolidaridad">¿Aporta al Fondo de Solidaridad?</label>
         <select
           id="inputAportesFondoSolidaridad"
           name="aportesFondoSolidaridad"
-          className="form-input"
+          className={styles.formInput}
           value={formState.aportesFondoSolidaridad}
           onChange={onFormElementChanged}
         >
@@ -168,7 +164,7 @@ function Form({
         <input
           id="inputAdicionalFondoSolidaridad"
           name="adicionalFondoSolidaridad"
-          className="form-input"
+          className={styles.formInput}
           type="checkbox"
           checked={formState.adicionalFondoSolidaridad}
           onChange={onFormElementChanged}
@@ -179,7 +175,7 @@ function Form({
         <input
           id="inputAportesCajaProfesionales"
           name="aportesCJPPU"
-          className="form-input"
+          className={styles.formInput}
           type="number"
           onFocus={handleFocus}
           min="0"
@@ -190,7 +186,7 @@ function Form({
         <input
           id="inputOtrasDeducciones"
           name="otrasDeducciones"
-          className="form-input"
+          className={styles.formInput}
           type="number"
           onFocus={handleFocus}
           min="0"
@@ -199,7 +195,12 @@ function Form({
         />
       </div>
       {BPC.has(formState.anio) ? (
-        <button key={+new Date()} className={submitBtnClasses.join(" ")}>
+        <button
+          key={+new Date()}
+          className={classNames(styles.btnSubmit, {
+            [`${styles.btnSubmitInvalido}`]: !formState.formValido,
+          })}
+        >
           Calcular
         </button>
       ) : null}

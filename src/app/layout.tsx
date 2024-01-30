@@ -1,12 +1,13 @@
 import generatedGitInfo from "#generated/git-info.json"
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import classNames from "classnames"
 import type { Metadata } from "next"
 import Image from "next/image"
 import React from "react"
 import GithubImage from "./assets/githubLogo.svg"
 import { BPC } from "./data/constants"
-import "./index.scss"
+import styles from "./index.module.scss"
 import reportWebVitals from "./reportWebVitals"
 
 // replace console.* for disable log on production
@@ -24,25 +25,25 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="es-UY">
-      <body>
-        <div className="App">
-          <div className="content">
-            <header className="title">
-              <h1 className="title-text">
+      <body className={styles.body}>
+        <div className={styles.App}>
+          <div className={styles.content}>
+            <header className={styles.title}>
+              <h1 className={styles.titleText}>
                 Salario líquido Uruguay{" "}
-                <span className="anio">
+                <span className={styles.anio}>
                   {Array.from(BPC.keys()).sort((a: number, b: number) => b - a)[0]}
                 </span>
               </h1>
             </header>
-            <main>{children}</main>
+            <main className={styles.main}>{children}</main>
           </div>
-          <footer className="footer">
-            <div className="footer-about">
-              <span className="footer-txt autor">
+          <footer className={styles.footer}>
+            <div className={styles.footerAbout}>
+              <span className={classNames(styles.footerTxt, styles.autor)}>
                 Creado por{" "}
                 <a
-                  className="autor-link"
+                  className={styles.autorLink}
                   href="https://www.linkedin.com/in/ismaelpadilla/"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -50,7 +51,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   Ismael Padilla
                 </a>{" "}
                 <a
-                  className="autor-link"
+                  className={styles.autorLink}
                   href="https://github.com/bre7/salario-liquido-uruguay"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -59,7 +60,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 </a>
                 .
               </span>
-              <span className="footer-txt ultimaActualizacion">
+              <span className={classNames(styles.footerTxt, styles.ultimaActualizacion)}>
                 #{generatedGitInfo?.gitCommitHash}
               </span>
             </div>
@@ -72,7 +73,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <Image
                 src={GithubImage}
                 alt="Github logo"
-                className="githubLogo"
+                className={styles.githubLogo}
                 height="40"
                 width="40"
               />

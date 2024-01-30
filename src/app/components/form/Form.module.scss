@@ -5,22 +5,22 @@
   // padding: 20px;
 }
 
-.form-section {
+.formSection {
   text-align: center;
 }
 
-.form-subSection {
+.formSubSection {
   text-align: center;
 }
 
-.form-grid {
+.formGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px 10px;
   text-align: right;
 }
 
-.form-input {
+.formInput {
   box-sizing: border-box;
   width: 20%;
   min-width: 120px;
@@ -49,7 +49,7 @@
   cursor: pointer;
 }
 
-.btnSubmit-invalido {
+.btnSubmitInvalido {
   animation-name: rojoAAzul;
   animation-duration: 2s;
 }

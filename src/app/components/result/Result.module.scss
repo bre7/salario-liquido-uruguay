@@ -26,16 +26,16 @@
   margin: 0 auto;
 }
 
-.liquido-dato {
+.liquidoDato {
   font-weight: bold;
 }
 
-.liquido-info {
+.liquidoInfo {
   margin-left: 10px;
   position: relative;
 }
 
-.liquido-info-i {
+.liquidoInfoItem {
   font-weight: bold;
   font-size: 12px;
   border: 2px solid gray;
@@ -50,7 +50,7 @@
   margin-bottom: 3px;
 }
 
-.liquido-info .liquido-tooltip {
+.liquidoInfo .liquidoTooltip {
   visibility: hidden;
   width: 300px;
   background-color: #5476aa;
@@ -74,7 +74,7 @@
 }
 
 /* Flecha tooltip */
-.liquido-info .liquido-tooltip::after {
+.liquidoInfo .liquidoTooltip::after {
   content: " ";
   position: absolute;
   bottom: 100%;
@@ -85,12 +85,12 @@
   border-color: transparent transparent #5476aa transparent;
 }
 
-.liquido-info:hover .liquido-tooltip {
+.liquidoInfo:hover .liquidoTooltip {
   visibility: visible;
   opacity: 1;
 }
 
-.result-section {
+.resultSection {
   text-align: center;
 }
 
@@ -102,11 +102,11 @@
   gap: 10px 20px;
 }
 
-.tablaBPS-label {
+.tablaBPSLabel {
   text-align: right;
 }
 
-.tablaBPS-dato {
+.tablaBPSDato {
   text-align: right;
 }
 
@@ -122,16 +122,16 @@
   gap: 10px 10px;
 }
 
-.tablaIRPF-head {
+.tablaIRPFHead {
   text-align: right;
   font-weight: bold;
 }
 
-.tablaIRPF-label {
+.tablaIRPFLabel {
   text-align: right;
 }
 
-.tablaIRPF-dato {
+.tablaIRPFDato {
   text-align: right;
 }
 
@@ -145,20 +145,20 @@
   gap: 10px 10px;
 }
 
-.resumenIRPF-label {
+.resumenIRPFLabel {
   grid-column: 1 / span 2;
 }
 
-.resumenIRPF-labelTotal {
+.resumenIRPFLabelTotal {
   font-weight: bold;
 }
 
-.resumenIRPF-dato {
+.resumenIRPFDato {
   grid-column: 4;
   text-align: right;
 }
 
-.resumenIRPF-total {
+.resumenIRPFTotal {
   font-weight: bold;
 }
 
@@ -170,11 +170,11 @@
   gap: 10px 10px;
 }
 
-.tablaProfesionales-label {
+.tablaProfesionalesLabel {
   grid-column: 1;
 }
 
-.tablaProfesionales-dato {
+.tablaProfesionalesDato {
   text-align: right;
 }
 
