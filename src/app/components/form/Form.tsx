@@ -75,6 +75,7 @@ function Form({
           style={{
             margin: "2rem auto",
             textAlign: "center",
+            color: "#58151c",
             backgroundColor: "#f8d7da",
             maxWidth: "50%",
             padding: "1rem",
@@ -89,7 +90,8 @@ function Form({
           style={{
             margin: "2rem auto",
             textAlign: "center",
-            backgroundColor: "#f8d7da",
+            color: "#664d03",
+            backgroundColor: "#fff3cd",
             maxWidth: "50%",
             padding: "1rem",
           }}
