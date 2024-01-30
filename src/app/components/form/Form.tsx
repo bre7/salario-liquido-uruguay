@@ -38,7 +38,7 @@ function Form({
    * Función que se invoca al seleccionar un input.
    * Selecciona los contenidos del mismo.
    */
-  function handleFocus(e: React.FocusEvent) {
+  function handleFocus(e: React.FocusEvent<HTMLInputElement>) {
     e.target?.select()
   }
 

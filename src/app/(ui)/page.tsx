@@ -45,9 +45,10 @@ const DefaultPage = () => {
   /**
    * Función que se llama cuando el usuario modifica alguno de los inputs del formulario.
    */
-  function onFormElementChanged(e: ChangeEvent) {
+  function onFormElementChanged(e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) {
     const name = e.target.name
-    const value = e.target.type === "checkbox" ? e.target.checked : Number(e.target.value)
+    const value =
+      e.target.type === "checkbox" ? (e.target as HTMLInputElement).checked : Number(e.target.value)
 
     setState({
       ...state,
