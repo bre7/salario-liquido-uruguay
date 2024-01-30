@@ -123,7 +123,7 @@ const ADICIONAL_FONDO_SOLIDARIDAD = (year: number) =>
  * Format string to be used by numeral, when formatting numbers.
  * @type {string}
  */
-const NUMERAL_FORMAT_STRING: string = "(0,0.[00])"
+const NUMERAL_FORMAT_STRING: string = "(0,0.00)"
 /**
  * Format string to be used by numeral, when formatting currency.
  * @type {string}
