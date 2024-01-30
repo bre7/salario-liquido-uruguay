@@ -24,20 +24,20 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-
   return (
     <html lang="es-UY">
       <body>
-      <div className="App">
+        <div className="App">
           <div className="content">
             <header className="title">
               <h1 className="title-text">
-                Salario líquido Uruguay <span className="anio">{Array.from(BPC.keys()).sort((a: number, b: number) => b - a)[0]}</span>
+                Salario líquido Uruguay{" "}
+                <span className="anio">
+                  {Array.from(BPC.keys()).sort((a: number, b: number) => b - a)[0]}
+                </span>
               </h1>
             </header>
-            <main>
-              {children}
-            </main>
+            <main>{children}</main>
           </div>
           <footer className="footer">
             <div className="footer-about">
@@ -52,9 +52,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   Ismael Padilla et al.
                 </a>
               </span>
-              <span className="footer-txt ultimaActualizacion">
-                vxxxx
-              </span>
+              <span className="footer-txt ultimaActualizacion">vxxxx</span>
             </div>
             <a
               href="https://github.com/bre7/salario-liquido-uruguay"
@@ -62,11 +60,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Image src={GithubImage} alt="Github logo" className="githubLogo" height="40" width="40" />
+              <Image
+                src={GithubImage}
+                alt="Github logo"
+                className="githubLogo"
+                height="40"
+                width="40"
+              />
             </a>
           </footer>
         </div>
-        </body>
+      </body>
     </html>
   )
 }

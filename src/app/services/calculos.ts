@@ -40,16 +40,16 @@ export interface ImpuestoIRPF {
 }
 
 export interface CalculoImpuestosInput {
-  anio: number,
-  salarioNominal: number,
-  tieneHijos: boolean,
-  tieneConyuge: boolean,
-  factorDeduccionPersonasACargo: number,
-  cantHijosSinDiscapacidad: number,
-  cantHijosConDiscapacidad: number,
-  aportesFondoSolidaridad: number,
-  adicionalFondoSolidaridad: boolean,
-  aportesCJPPU: number,
+  anio: number
+  salarioNominal: number
+  tieneHijos: boolean
+  tieneConyuge: boolean
+  factorDeduccionPersonasACargo: number
+  cantHijosSinDiscapacidad: number
+  cantHijosConDiscapacidad: number
+  aportesFondoSolidaridad: number
+  adicionalFondoSolidaridad: boolean
+  aportesCJPPU: number
   otrasDeducciones: number
 }
 

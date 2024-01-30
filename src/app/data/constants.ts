@@ -7,14 +7,14 @@
  */
 const BPC = new Map([
   [2024, 6.177],
-  [2023, 5.660],
+  [2023, 5.66],
   [2022, 5.164],
-  [2021, 4.870],
+  [2021, 4.87],
   [2020, 4.519],
   [2019, 4.154],
   [2018, 3.848],
   [2017, 3.611],
-  [2016, 3.340],
+  [2016, 3.34],
   [2015, 3.052],
   [2014, 2.819],
   [2013, 2.598],
@@ -104,17 +104,20 @@ const TASA_DEDUCCIONES_DESDE15BPC = 8
 /**
  * Cantidad deducida del IRPF por cada hijo sin discapacidad.
  */
-const DEDUCCION_HIJO_SIN_DISCAPACIDAD = (year: number) => BPC.get(year) ?? 0 > 0 ? (13 * BPC.get(year)!) / 12 : undefined
+const DEDUCCION_HIJO_SIN_DISCAPACIDAD = (year: number) =>
+  BPC.get(year) ?? 0 > 0 ? (13 * BPC.get(year)!) / 12 : undefined
 /**
  * Cantidad deducida del IRPF por cada hijo con discapacidad.
  */
-const DEDUCCION_HIJO_CON_DISCAPACIDAD = (year: number) => BPC.get(year) ?? 0 > 0 ? (26 * BPC.get(year)!) / 12 : undefined
+const DEDUCCION_HIJO_CON_DISCAPACIDAD = (year: number) =>
+  BPC.get(year) ?? 0 > 0 ? (26 * BPC.get(year)!) / 12 : undefined
 
 /**
  * Adicional al fondo de solidaridad que debe pagarse en carreras de duracion igual o mayor
  * a cinco años.
  */
-const ADICIONAL_FONDO_SOLIDARIDAD = (year: number) => BPC.get(year) ?? 0 > 0 ? ((5 / 3) * BPC.get(year)!) / 12 : undefined
+const ADICIONAL_FONDO_SOLIDARIDAD = (year: number) =>
+  BPC.get(year) ?? 0 > 0 ? ((5 / 3) * BPC.get(year)!) / 12 : undefined
 
 /**
  * Format string to be used by numeral, when formatting numbers.
@@ -128,7 +131,20 @@ const NUMERAL_FORMAT_STRING: string = "(0,0.[00])"
 const NUMERAL_CURRENCY_FORMAT_STRING: string = `$ ${NUMERAL_FORMAT_STRING}`
 
 export {
-  ADICIONAL_FONDO_SOLIDARIDAD, APORTES_FONASA_DESDE25BPC, APORTES_FONASA_HASTA25BPC, APORTES_JUBILATORIOS, APORTE_FRL, BPC, DEDUCCION_HIJO_CON_DISCAPACIDAD, DEDUCCION_HIJO_SIN_DISCAPACIDAD, INCREMENTO_INGRESOS_GRAVADOS, IRPF_FRANJAS, NUMERAL_CURRENCY_FORMAT_STRING, NUMERAL_FORMAT_STRING, TASA_DEDUCCIONES_DESDE15BPC,
-  TASA_DEDUCCIONES_HASTA15BPC, TOPE_AFAP, TOPE_APORTES_JUBILATORIOS
+  ADICIONAL_FONDO_SOLIDARIDAD,
+  APORTES_FONASA_DESDE25BPC,
+  APORTES_FONASA_HASTA25BPC,
+  APORTES_JUBILATORIOS,
+  APORTE_FRL,
+  BPC,
+  DEDUCCION_HIJO_CON_DISCAPACIDAD,
+  DEDUCCION_HIJO_SIN_DISCAPACIDAD,
+  INCREMENTO_INGRESOS_GRAVADOS,
+  IRPF_FRANJAS,
+  NUMERAL_CURRENCY_FORMAT_STRING,
+  NUMERAL_FORMAT_STRING,
+  TASA_DEDUCCIONES_DESDE15BPC,
+  TASA_DEDUCCIONES_HASTA15BPC,
+  TOPE_AFAP,
+  TOPE_APORTES_JUBILATORIOS,
 }
-

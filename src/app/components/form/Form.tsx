@@ -25,10 +25,11 @@ function Form({
   formState,
 }: {
   onFormElementChanged: (event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => void
-  onFormSubmitted: (event: React.MouseEvent<HTMLButtonElement> | React.FormEvent<HTMLFormElement>) => void
+  onFormSubmitted: (
+    event: React.MouseEvent<HTMLButtonElement> | React.FormEvent<HTMLFormElement>
+  ) => void
   formState: IFormState
 }) {
-
   // useEffect(() => {
   //   window.scrollTo(0, 0)
   // }, [])
@@ -73,8 +74,19 @@ function Form({
         />
       </div>
 
-      { BPC.has(formState.anio) ? null : <div style={{ margin: "2rem auto", textAlign: "center", backgroundColor: "#f8d7da", maxWidth: "50%", padding: "1rem"}}>BPC no encontrado para el año {formState.anio}</div>}
-
+      {BPC.has(formState.anio) ? null : (
+        <div
+          style={{
+            margin: "2rem auto",
+            textAlign: "center",
+            backgroundColor: "#f8d7da",
+            maxWidth: "50%",
+            padding: "1rem",
+          }}
+        >
+          BPC no encontrado para el año {formState.anio}
+        </div>
+      )}
 
       <h2 className="form-section">Cálculo de aportes BPS</h2>
       <div className="form-grid">
@@ -186,11 +198,11 @@ function Form({
           onChange={onFormElementChanged}
         />
       </div>
-      { BPC.has(formState.anio) ?
+      {BPC.has(formState.anio) ? (
         <button key={+new Date()} className={submitBtnClasses.join(" ")}>
           Calcular
         </button>
-       : null }
+      ) : null}
     </form>
   )
 }
