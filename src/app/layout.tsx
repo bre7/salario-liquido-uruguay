@@ -1,3 +1,4 @@
+import generatedGitInfo from "#generated/git-info.json"
 import type { Metadata } from "next"
 import Image from "next/image"
 import React from "react"
@@ -52,7 +53,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   Ismael Padilla et al.
                 </a>
               </span>
-              <span className="footer-txt ultimaActualizacion">vxxxx</span>
+              <span className="footer-txt ultimaActualizacion">
+                #{generatedGitInfo?.gitCommitHash}
+              </span>
             </div>
             <a
               href="https://github.com/bre7/salario-liquido-uruguay"
