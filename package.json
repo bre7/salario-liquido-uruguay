@@ -1,25 +1,43 @@
 {
-  "name": "salario-liquido-uruguay",
-  "version": "1.2.1",
+  "name": "salario-liquido-uruguay-next",
+  "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-router-dom": "^5.1.2",
-    "react-scripts": "4.0.3"
-  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "next dev",
+    "build": "yarn git-info && next build",
+    "start": "next start",
+    "lint": "next lint",
+    "format": "prettier --write './src/**/*.{js,jsx,ts,tsx,css,scss,md,json}' --config ./.prettierrc",
+    "git-info": "node ./gitInfo.js"
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^14.1.2",
+    "@testing-library/user-event": "^14.5.1",
+    "@vercel/speed-insights": "^1.0.2",
+    "next": "14.1.0",
+    "numeral": "^2.0.6",
+    "react": "^18",
+    "react-dom": "^18",
+    "sass": "^1.69.5",
+    "web-vitals": "^3.5.0"
   },
+  "devDependencies": {
+    "@types/jest": "^29.5.11",
+    "@types/node": "^20",
+    "@types/numeral": "^2.0.5",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.1.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-config-react-app": "^7.0.1",
+    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-react": "^7.33.2",
+    "prettier": "^3.1.1",
+    "typescript": "^5"
+  },
+  "packageManager": "yarn@4.0.2",
   "browserslist": {
     "production": [
       ">0.2%",
@@ -31,11 +49,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "prettier": "2.0.5"
-  },
-  "prettier": {
-    "printWidth": 120
   }
 }
