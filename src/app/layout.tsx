@@ -93,13 +93,3 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 if (typeof window !== "undefined") {
   reportWebVitals(console.log)
 }
-// reportWebVitals((metric) => {
-//   // @ts-ignore
-//   window.gtag("event", "web_vitals", {
-//     eventCategory: "Web Vitals",
-//     eventAction: metric.name,
-//     eventValue: Math.round(metric.name === 'CLS' ? metric.value * 1_000 : metric.value), // values must be integers
-//     eventLabel: metric.id, // id unique to current page load
-//     nonInteraction: true, // avoids affecting bounce rate
-//   })
-// })
