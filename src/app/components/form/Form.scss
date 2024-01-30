@@ -1,0 +1,62 @@
+.form {
+  // width: 80%;
+  box-sizing: border-box;
+  // margin: auto;
+  // padding: 20px;
+}
+
+.form-section {
+  text-align: center;
+}
+
+.form-subSection {
+  text-align: center;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 10px;
+  text-align: right;
+}
+
+.form-input {
+  box-sizing: border-box;
+  width: 20%;
+  min-width: 120px;
+  text-align: right;
+  padding: 2px;
+}
+
+@keyframes rojoAAzul {
+  from {
+    background-color: rgb(255, 83, 71);
+  }
+  to {
+    background-color: #5476aa;
+  }
+}
+
+.btnSubmit {
+  margin: auto;
+  display: block;
+  background-color: #5476aa;
+  color: white;
+  font-size: 1em;
+  border: 0;
+  padding: 0.5rem 1rem;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.btnSubmit-invalido {
+  animation-name: rojoAAzul;
+  animation-duration: 2s;
+}
+
+@media only screen and (max-width: 783px) {
+  .form {
+    width: 95%;
+    margin: auto;
+  }
+}
