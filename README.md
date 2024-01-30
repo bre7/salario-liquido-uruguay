@@ -1,7 +1,7 @@
 # Salario líquido uruguay
 
 ![Versión](https://img.shields.io/github/package-json/v/bre7/salario-liquido-uruguay?label=versi%C3%B3n)
-![Build y test](https://github.com/bre7/salario-liquido-uruguay/workflows/Build%20y%20test/badge.svg)
+![Build and Test](https://github.com/bre7/salario-liquido-uruguay/workflows/Build%20and%20Test/badge.svg)
 
 ✔Actualizado para el 2024.
 
