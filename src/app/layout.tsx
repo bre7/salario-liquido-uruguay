@@ -50,8 +50,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Ismael Padilla et al.
+                  Ismael Padilla
+                </a>{" "}
+                <a
+                  className="autor-link"
+                  href="https://github.com/bre7/salario-liquido-uruguay"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  et al
                 </a>
+                .
               </span>
               <span className="footer-txt ultimaActualizacion">
                 #{generatedGitInfo?.gitCommitHash}
