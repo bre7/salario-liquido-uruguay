@@ -243,15 +243,6 @@ export const calcularImpuestos = (
   }
   const totalIRPFRedondeado = totalIRPF // Number(totalIRPF.toFixed(2))
 
-  console.debug("calcularImpuestos", {
-    salarioLiquido: salarioLiquidoRedondeado,
-    aportesJubilatorios: aportesJubilatoriosRedondeado,
-    aportesFONASA: aportesFONASARedondeado,
-    aporteFRL: aporteFRLRedondeado,
-    detalleIRPF: detalleIRPFRedondeado,
-    totalIRPF: totalIRPFRedondeado,
-  })
-
   return {
     salarioLiquido: salarioLiquidoRedondeado,
     aportesJubilatorios: aportesJubilatoriosRedondeado,
