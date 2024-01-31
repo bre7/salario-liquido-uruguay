@@ -87,6 +87,7 @@
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
+  row-gap: 3rem;
 
   @media (min-width: 1024px) {
     flex-direction: row;
