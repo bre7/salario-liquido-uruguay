@@ -3,7 +3,7 @@
 import Form, { IFormState } from "#/app/components/form/Form"
 import Result from "#/app/components/result/Result"
 import React, { ChangeEvent, useState } from "react"
-import { DetalleIRPF, calcularImpuestos } from "../services/calculos"
+import { DetalleIRPF, calcularImpuestos } from "./services/calculos"
 
 interface IState {
   formState: IFormState
