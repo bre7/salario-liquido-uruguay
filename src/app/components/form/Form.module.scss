@@ -60,3 +60,25 @@
     margin: auto;
   }
 }
+
+.alert {
+  margin: 2rem auto;
+  text-align: center;
+  max-width: 50%;
+  padding: 1rem;
+
+  &.alertDanger {
+    color: #58151c;
+    background-color: #f8d7da;
+  }
+
+  &.alertSuccess {
+    color: #155724;
+    background-color: #d4edda;
+  }
+
+  &.alertWarning {
+    color: #664d03;
+    background-color: #fff3cd;
+  }
+}

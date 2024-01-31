@@ -71,31 +71,13 @@ function Form({
       </div>
 
       {BPC.has(formState.anio) ? null : (
-        <div
-          style={{
-            margin: "2rem auto",
-            textAlign: "center",
-            color: "#58151c",
-            backgroundColor: "#f8d7da",
-            maxWidth: "50%",
-            padding: "1rem",
-          }}
-        >
+        <div className={classNames(styles.alert, styles.alertDanger)}>
           BPC no encontrado para el año {formState.anio}
         </div>
       )}
 
       {TOPE_APORTES_JUBILATORIOS.has(formState.anio) ? null : (
-        <div
-          style={{
-            margin: "2rem auto",
-            textAlign: "center",
-            color: "#664d03",
-            backgroundColor: "#fff3cd",
-            maxWidth: "50%",
-            padding: "1rem",
-          }}
-        >
+        <div className={classNames(styles.alert, styles.alertWarning)}>
           TOPE APORTE JUBILATORIO no encontrado para el año {formState.anio}, utilizando valor de{" "}
           {formState.anio - 1}
         </div>
