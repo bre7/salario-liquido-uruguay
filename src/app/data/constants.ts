@@ -57,6 +57,7 @@ const APORTES_JUBILATORIOS = 15
  * // TODO: Se calcula con año actual si mes >= febrero
  */
 const TOPE_APORTES_JUBILATORIOS = new Map([
+  [2024, 256_821],
   [2023, 236_309],
   [2022, 215_179],
   [2021, 202_693],
@@ -84,6 +85,7 @@ const APORTE_FRL = 0.1
  * Tope AFAP.
  */
 const TOPE_AFAP = new Map([
+  [2024, 256_821],
   [2023, 236_309],
   [2022, 215_179],
 ])
