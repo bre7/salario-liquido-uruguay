@@ -6,6 +6,7 @@
  * Valor BPC.
  */
 const BPC = new Map([
+  [2025, 6_576],
   [2024, 6_177],
   [2023, 5_660],
   [2022, 5_164],
@@ -57,6 +58,7 @@ const APORTES_JUBILATORIOS = 15
  * // TODO: Se calcula con año actual si mes >= febrero
  */
 const TOPE_APORTES_JUBILATORIOS = new Map([
+  [2025, 272_564],
   [2024, 256_821],
   [2023, 236_309],
   [2022, 215_179],
@@ -85,6 +87,7 @@ const APORTE_FRL = 0.1
  * Tope AFAP.
  */
 const TOPE_AFAP = new Map([
+  [2025, 272_564],
   [2024, 256_821],
   [2023, 236_309],
   [2022, 215_179],
