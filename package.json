@@ -15,7 +15,7 @@
     "@vercel/analytics": "^1.1.2",
     "@vercel/speed-insights": "^1.0.9",
     "classnames": "^2.5.1",
-    "next": "16.0.7",
+    "next": "16.0.10",
     "numeral": "^2.0.6",
     "react": "19.2.1",
     "react-dom": "19.2.1",
